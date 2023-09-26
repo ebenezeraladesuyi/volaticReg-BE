@@ -18,6 +18,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 // const DB_URL = "mongodb://127.0.0.1/Eben"
 const uri = "mongodb+srv://eben19:ebenezer19@cluster0.u3wri8y.mongodb.net/";
 // const uri = process.env.MONGOOSE_DB;
+// deployed url = https://volatic-reg-be.onrender.com
 const dbConfig = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const conn = yield mongoose_1.default.connect(uri);

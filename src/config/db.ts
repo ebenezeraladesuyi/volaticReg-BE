@@ -9,6 +9,8 @@ const uri = "mongodb+srv://eben19:ebenezer19@cluster0.u3wri8y.mongodb.net/"
 
 // const uri = process.env.MONGOOSE_DB;
 
+// deployed url = https://volatic-reg-be.onrender.com
+
 
 const dbConfig = async (): Promise<void> => {
     try {

@@ -7,7 +7,7 @@ const appConfig = (app: Application) => {
   app.use(express.json()).use(cors());
 
   //routes
-  app.use("/users" , userRouter)
+  app.use("/volatic" , userRouter)
 
   app.get("/" , (req: Request , res:Response)=>{
     return res.status(200).json({
