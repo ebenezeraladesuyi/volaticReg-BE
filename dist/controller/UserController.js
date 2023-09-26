@@ -50,7 +50,7 @@ exports.getOneUser = getOneUser;
 //register a user
 const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { firstName, surname, email, phoneNumber, educationalQualification, computerExperience, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
+        const { firstName, surname, email, phoneNumber, address, educationalQualification, computerExperience, emergencyContactName, emergencyContactRelationship, emergencyContactNumber, } = req.body;
         const checkExist = yield UserModel_1.default.findOne({ email });
         if (checkExist) {
             return res.status(500).json({
@@ -63,6 +63,7 @@ const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                 surname,
                 email,
                 phoneNumber,
+                address,
                 educationalQualification,
                 computerExperience,
                 emergencyContactName,
