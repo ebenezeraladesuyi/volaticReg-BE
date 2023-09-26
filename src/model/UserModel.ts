@@ -60,6 +60,6 @@ const userSchema = new mongoose.Schema({
 });
 
 
-const UserModel = mongoose.model<Iuser>("AllUsers" , userSchema)
+const UserModel = mongoose.model<Iuser>("AllRegistered" , userSchema)
 
 export default UserModel

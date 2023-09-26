@@ -46,5 +46,5 @@ const userSchema = new mongoose_1.default.Schema({
         required: [true, "please enter your emergency contact number"],
     },
 });
-const UserModel = mongoose_1.default.model("AllUsers", userSchema);
+const UserModel = mongoose_1.default.model("AllRegistered", userSchema);
 exports.default = UserModel;

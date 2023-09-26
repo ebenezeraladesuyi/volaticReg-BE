@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import env from "dotenv";
+// import env from "dotenv";
 // env.config()
 
 // const DB_URL = "mongodb://0.0.0.0:27017/forEben";
