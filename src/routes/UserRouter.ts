@@ -3,8 +3,8 @@ import { getAllUsers, getOneUser, register, } from "../controller/UserController
 
 const userRouter = express.Router()
 
-userRouter.get("/" , getAllUsers)
-userRouter.get("/:userId" , getOneUser)
+userRouter.get("/registered" , getAllUsers)
+userRouter.get("/registered/:userId" , getOneUser)
 userRouter.post("/register", register)
 
 
