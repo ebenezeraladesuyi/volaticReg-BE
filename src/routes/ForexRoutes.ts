@@ -4,7 +4,7 @@ import { getAllForex, registerForex } from "../controller/ForexController";
 
 const forexRouter = express.Router();
 
-forexRouter.post("./registerforex", registerForex);
+forexRouter.post("/registerforex", registerForex);
 forexRouter.get("/getforex", getAllForex)
 
 
