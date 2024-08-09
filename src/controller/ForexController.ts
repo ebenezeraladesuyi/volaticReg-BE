@@ -4,7 +4,7 @@ import { forexModel } from "../model/ForexModel";
 
 export const registerForex = async (req: Request, res: Response) => {
     try {
-        const{fullName, email, phoneNumber} = req.body;
+        const {fullName, email, phoneNumber} = req.body;
 
         const checkExist= await forexModel.findOne({email})
 
