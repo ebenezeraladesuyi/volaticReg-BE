@@ -3,6 +3,7 @@ import cors from "cors";
 import userRouter from "./routes/UserRouter";
 import forexRouter from "./routes/ForexRoutes";
 import unizikRouter from "./routes/UnizikTechRouter";
+import unizikBootRouter from "./routes/UnizikBootRouter";
 
 
 const appConfig = (app: Application) => {
@@ -12,6 +13,7 @@ const appConfig = (app: Application) => {
   app.use("/volatic" , userRouter)
   app.use("/forex", forexRouter)
   app.use("/unizik", unizikRouter)
+  app.use("/unizikboot", unizikBootRouter)
 
   app.get("/" , (req: Request , res:Response)=>{
     return res.status(200).json({
