@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const UnizikBootController_1 = require("../controller/UnizikBootController");
 const unizikBootRouter = express_1.default.Router();
-unizikBootRouter.post("/registerunizik", UnizikBootController_1.registerBootUnizik);
-unizikBootRouter.get("/getallunizik", UnizikBootController_1.getAllBootUnizik);
+unizikBootRouter.post("/registerbootunizik", UnizikBootController_1.registerBootUnizik);
+unizikBootRouter.get("/getallbootunizik", UnizikBootController_1.getAllBootUnizik);
 exports.default = unizikBootRouter;
