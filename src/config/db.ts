@@ -1,21 +1,24 @@
 import mongoose from "mongoose";
-// import env from "dotenv";
-// env.config()
+import env from "dotenv";
 
-// const DB_URL = "mongodb://0.0.0.0:27017/forEben";
-// const DB_URL = "mongodb://127.0.0.1/Eben"
+env.config()
 
-const uri = "mongodb+srv://eben19:ebenezer19@cluster0.u3wri8y.mongodb.net/"
 
-// const uri = process.env.MONGOOSE_DB;
+const uri = process.env.MONGOOSE_DB;
+// console.log("Mongoose URI:", process.env.MONGOOSE_DB);
 
 // deployed url = https://volatic-reg-be.onrender.com
+
+if (!uri) {
+  console.error("MONGOOSE_DB environment variable is not defined.");
+  process.exit(1); // Exit the process or handle the error appropriately
+}
 
 
 const dbConfig = async (): Promise<void> => {
     try {
-      const conn = await mongoose.connect(uri);
-      console.log(`connected to database on port ${conn.connection.host}`);
+      const con = await mongoose.connect(uri);
+      console.log(`connected to database on port ${con.connection.host}`);
     } catch (error) {
       console.log(`failed to connect to database` , error);
     }
@@ -23,16 +26,3 @@ const dbConfig = async (): Promise<void> => {
   
   export default dbConfig;
 
-// const dbConfig = () => {
-//     try {
-//       mongoose
-//         .connect(MONGOOSE_DB)
-//         .then(() => {
-//           console.log('connected to database on port');
-//         })
-//     } catch (error) {
-//       console.log(`failed to connect to database` , error);
-//     }
-//   };
-
-//   export default dbConfig;
