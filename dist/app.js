@@ -18,7 +18,7 @@ const appConfig = (app) => {
     app.use("/unizikboot", UnizikBootRouter_1.default);
     app.get("/", (req, res) => {
         return res.status(200).json({
-            message: "default get"
+            message: "defaultt get"
         });
     });
 };
