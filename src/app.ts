@@ -4,6 +4,7 @@ import userRouter from "./routes/UserRouter";
 import forexRouter from "./routes/ForexRoutes";
 import unizikRouter from "./routes/UnizikTechRouter";
 import unizikBootRouter from "./routes/UnizikBootRouter";
+import electionRoutes from "./routes/ElectionRoutes";
 
 
 const appConfig = (app: Application) => {
@@ -14,6 +15,8 @@ const appConfig = (app: Application) => {
   app.use("/forex", forexRouter)
   app.use("/unizik", unizikRouter)
   app.use("/unizikboot", unizikBootRouter)
+  app.use("/elect", electionRoutes)
+
 
   app.get("/" , (req: Request , res:Response)=>{
     return res.status(200).json({
