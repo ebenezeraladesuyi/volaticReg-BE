@@ -16,7 +16,7 @@ const appConfig = (app) => {
     app.use("/volatic", UserRouter_1.default);
     app.use("/forex", ForexRoutes_1.default);
     app.use("/unizik", UnizikTechRouter_1.default);
-    app.use("/unizikboot", UnizikBootRouter_1.default);
+    app.use("/project200", UnizikBootRouter_1.default);
     app.use("/elect", ElectionRoutes_1.default);
     app.get("/", (req, res) => {
         return res.status(200).json({
