@@ -3,8 +3,8 @@ import { getAllBootUnizik, registerBootUnizik } from "../controller/UnizikBootCo
 
 const unizikBootRouter = express.Router();
 
-unizikBootRouter.post("/registerbootunizik", registerBootUnizik);
-unizikBootRouter.get("/getallbootunizik", getAllBootUnizik);
+unizikBootRouter.post("/registerproject200", registerBootUnizik);
+unizikBootRouter.get("/getallproject200", getAllBootUnizik);
 
 export default unizikBootRouter;
 

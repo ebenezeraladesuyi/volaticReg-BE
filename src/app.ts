@@ -14,7 +14,7 @@ const appConfig = (app: Application) => {
   app.use("/volatic" , userRouter)
   app.use("/forex", forexRouter)
   app.use("/unizik", unizikRouter)
-  app.use("/unizikboot", unizikBootRouter)
+  app.use("/project200", unizikBootRouter)
   app.use("/elect", electionRoutes)
 
 
