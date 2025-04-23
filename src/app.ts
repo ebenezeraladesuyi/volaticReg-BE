@@ -5,6 +5,7 @@ import forexRouter from "./routes/ForexRoutes";
 import unizikRouter from "./routes/UnizikTechRouter";
 import unizikBootRouter from "./routes/UnizikBootRouter";
 import electionRoutes from "./routes/ElectionRoutes";
+import waitlistRouter from "./routes/WaitlistAcademosRouter";
 
 
 const appConfig = (app: Application) => {
@@ -16,6 +17,7 @@ const appConfig = (app: Application) => {
   app.use("/unizik", unizikRouter)
   app.use("/project200", unizikBootRouter)
   app.use("/elect", electionRoutes)
+  app.use("/waitacad", waitlistRouter)
 
 
   app.get("/" , (req: Request , res:Response)=>{

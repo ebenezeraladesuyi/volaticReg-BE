@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const WaitlistAcademosController_1 = require("../controller/WaitlistAcademosController");
+const waitlistRouter = (0, express_1.Router)();
+waitlistRouter.post('/addwaitlist', WaitlistAcademosController_1.addToWaitlist);
+waitlistRouter.get("/getallwaitlist", WaitlistAcademosController_1.getWaitlistEntries);
+waitlistRouter.get("/getonewaitlist/:id", WaitlistAcademosController_1.getWaitlistEntry);
+waitlistRouter.delete("/deleteonewaitlist/:id", WaitlistAcademosController_1.deleteWaitlistEntry);
+exports.default = waitlistRouter;
